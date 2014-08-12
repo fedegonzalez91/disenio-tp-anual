@@ -11,7 +11,6 @@ namespace tpAnual
     {
         private List<Partido> _partidos;
         private List<Jugador> _miembros;
-
        // private static  Administrador instance = new Administrador();
         private static Administrador instance = null;
          private Administrador() { }
