@@ -7,53 +7,32 @@ using System.Threading.Tasks;
 
 namespace tpAnual
 {
-    public sealed class Administrador
+    public sealed class JugadorLogueado:Jugador
     {
-        private List<Partido> _partidos;
-        private List<Jugador> _miembros;
-       // private static  Administrador instance = new Administrador();
-        private static Administrador instance = null;
-         private Administrador() { }
+      
+        private static JugadorLogueado instance = null;
+         private JugadorLogueado() { }
 
-            public static Administrador Instance
+            public static JugadorLogueado Instance
             {
                 get
                 {
                     if (instance == null)
                     {
-                        instance = new Administrador();
-                        instance.miembros=new List<Jugador>();
-                        instance.partidos=new List<Partido>();
-    
-                    }
-                        
+                        instance = new JugadorLogueado();
+                    }      
                     return instance;
                 }
 
                
             }
      
-        public List<Jugador> miembros
-        {
-            get { return _miembros; }
-            set { _miembros = value; }
-        }
-
-        public void InitializeComponent()
-        {
-            this.partidos = new List<Partido>();
-            this.miembros = new List<Jugador>();
-        }
-        public List<Partido> partidos
-        {
-            get { return _partidos; }
-            set {  _partidos = value;}
-        }
-
+        /* Agregado como procedure en SQL
         public void agregarPartido(Partido unPartido)
         {
             this.partidos.Add(unPartido);
-        }
+        }*/
+        /* Agregado como procedure en SQL
         public void crearPartido(DateTime tiempoYHora,DateTime hora,string Nombre)
         {
             Partido partido = new Partido();
@@ -64,13 +43,14 @@ namespace tpAnual
             partido.fechaYHora.AddSeconds(hora.Second);
             partido.nombre = Nombre;
             this.partidos.Add(partido);
-        }
-
+        }*/
+    /* Agregado como procedure en SQL
      public Jugador buscarMiembro(string user)
      {
          return this.miembros.Find(unMiembro => unMiembro.user == user);
      }
-
+     */
+        /*Agregado como procedure en SQL
         public bool verificarUsuario(string user)
         {
             if(user=="admin")
@@ -80,7 +60,9 @@ namespace tpAnual
 
             return Administrador.Instance.miembros.Exists(unMiembro => unMiembro.user == user);
         }
+        */
 
+        /* Agregado como procedure en SQL
         public bool verificarUsuarioYContra(string user, string contra)
         {
             if(user=="admin"&&contra=="admin")
@@ -88,8 +70,9 @@ namespace tpAnual
                 return true;
             }
             return Administrador.instance.miembros.Exists(unMiembro =>userYPass(unMiembro,user,contra));
-        }
+        }*/
 
+        /* Agregado como procedure en el SQL
         public bool userYPass(Jugador unMiembro,string user, string contra)
         {
             if((unMiembro.user==user)&&(unMiembro.contra==contra))
@@ -98,28 +81,21 @@ namespace tpAnual
             }
             return false;
         }
+        */
 
-        public bool nombreYContra(Jugador unMiembro,string user,string contra)
-        {
-           
-            if((unMiembro.user==user)&&(unMiembro.contra==contra))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        /* Agregado como procedure en SQL
         public Partido buscarPartido(string nombre)
         {
             return Administrador.Instance.partidos.Find(unPartido=>unPartido.nombre==nombre);
         }
+         * */
+
+        /* Agregado como procedure en SQL
         public int cantidadDePartidos ()
         {
             int cantidad = this.partidos.Count;
             return cantidad;
-        }
+        }*/
 
         public List<Jugador> generarListaDeJugadores(Partido unPartido)
         {
