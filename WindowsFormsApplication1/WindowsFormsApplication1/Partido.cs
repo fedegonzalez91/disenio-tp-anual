@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
 
     public class Partido
     {
-        private Administrador _unAdministrador;
         private List<Estandar> _jugadoresEstandar;
         private List<Condicional> _jugadoresCondicionales;
         private List<Solidario> _jugadoresSolidarios;
@@ -30,11 +29,7 @@ namespace tpAnual
             get { return _nombre; }
             set { _nombre = value; }
         }
-        public Administrador unAdministrador
-        {
-            get { return _unAdministrador; }
-            set { _unAdministrador = value; }
-        }
+
         public List<Estandar> jugadoresEstandar
         {
             get { return _jugadoresEstandar; }

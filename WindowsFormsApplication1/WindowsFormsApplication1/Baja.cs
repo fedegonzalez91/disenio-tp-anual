@@ -8,12 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
     public partial class Baja : Form
     {
         private Partido _partido;
-        private Jugador _jugadorLogueado;
         private Jugador _jugadorReemplazante;
         private string _tipoEliminado;
 
@@ -23,11 +22,6 @@ namespace tpAnual
             set { _tipoEliminado = value; }
         }
 
-        public Jugador jugadorLogueado
-        {
-            get { return _jugadorLogueado; }
-            set { _jugadorLogueado = value; }
-        }
         public Jugador jugadorReemplazante
         {
             get { return _jugadorReemplazante; }

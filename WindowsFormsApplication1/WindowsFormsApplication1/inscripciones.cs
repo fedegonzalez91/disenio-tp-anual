@@ -9,26 +9,18 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
     public partial class inscripciones : Form
     {
         private int _check = 1;
         private Partido _partido;
-        private Jugador _jugadorLogueado;
         private int _primerVez;
 
         public int primeraVez
         {
             get { return _primerVez; }
             set { _primerVez = value; }
-        }
-
-
-        public Jugador jugadorLogueado
-        {
-            get { return _jugadorLogueado; }
-            set { _jugadorLogueado = value; }
         }
 
         public Partido partido

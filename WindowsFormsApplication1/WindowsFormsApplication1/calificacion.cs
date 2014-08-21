@@ -8,31 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
 
     public partial class calificacion : Form
 
     {
-        private Administrador _unAdministrador;
         private Partido _unPartido;
         private int _contador;
         private Jugador _jugadorTemporal;
         private int _nota;
         private List<Partido> _partidos;
-        private Jugador _jugadorLogueado;
         private List<Partido> _partidosJugados;
 
         public List<Partido> partidosJugados
         {
             get { return _partidosJugados; }
             set { _partidosJugados = value; }
-        }
-
-        public Jugador jugadorLogueado
-        {
-            get { return _jugadorLogueado; }
-            set { _jugadorLogueado = value; }
         }
 
 
@@ -60,11 +52,6 @@ namespace tpAnual
             set { _unPartido = value;}
         }
 
-        public Administrador unAdministrador
-        {
-            get { return _unAdministrador; }
-            set { _unAdministrador = value; }
-        }
         public calificacion()
         {
             InitializeComponent();

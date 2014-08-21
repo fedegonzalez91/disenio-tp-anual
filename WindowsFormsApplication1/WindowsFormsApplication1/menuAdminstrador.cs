@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
     public partial class menuAdministrador : Form
     {

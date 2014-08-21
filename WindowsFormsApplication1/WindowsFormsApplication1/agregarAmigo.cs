@@ -8,30 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
        
     public partial class agregarunAmigo : Form
     {
-        private Administrador _unAdministrador;
+
         private Partido _unPartido;
         private Jugador _unJugador;
         public int contador=0;
-        private Jugador _jugadorLogueado;
-
-        public Jugador jugadorLogueado
-        {
-            get { return _jugadorLogueado; }
-            set { _jugadorLogueado = value; }
-        }
+  
 
 
-        //private DateTime _FechaYHora;
-        public Administrador unAdministrador
-        {
-            get { return _unAdministrador; }
-            set { _unAdministrador = value; }
-        }
 
         public Partido unPartido
         {
@@ -60,7 +48,7 @@ namespace tpAnual
             {
                 this.cargarListaJugadores();
                 this.unJugador.InitializeComponent();
-                labelNombre.Text = this.jugadorLogueado.user;
+                labelNombre.Text = JugadorLogueado.Instance.user;
                 listJugadores.Enabled = true;
             }
 
@@ -74,7 +62,7 @@ namespace tpAnual
 
         private void agregarTodosMenosElmismo (Jugador unJugador)
         {
-            if(unJugador.user!=this.jugadorLogueado.nombre)
+            if(unJugador.user!=JugadorLogueado.Instance.user)
             {
                 listJugadores.Items.Add(unJugador.user);
             }
@@ -89,7 +77,7 @@ namespace tpAnual
             }
             else
             {
-                this.jugadorLogueado.amigos.Add(Administrador.Instance.buscarMiembro(listJugadores.SelectedItem.ToString()));
+                JugadorLogueado.Instance.amigos.Add(Administrador.Instance.buscarMiembro(listJugadores.SelectedItem.ToString()));
                 MessageBox.Show("Amigo agregado Exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

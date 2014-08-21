@@ -1,4 +1,4 @@
-﻿namespace tpAnual
+﻿namespace TPDisenio2014
 {
     partial class agregarunAmigo
     {

@@ -8,17 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
     public partial class Alta : Form
     {
-        private Jugador _jugadorLogueado;
-
-        public Jugador jugadorLogueado
-        {
-            get{ return _jugadorLogueado;}
-            set{_jugadorLogueado=value;}
-        }
         public Alta()
         {
             InitializeComponent();
@@ -107,7 +100,6 @@ namespace tpAnual
         {
             this.Hide();
             agregarunAmigo frmaAmigos = new agregarunAmigo();
-            frmaAmigos.jugadorLogueado = this.jugadorLogueado;
             frmaAmigos.ShowDialog();
             this.Show();
         }

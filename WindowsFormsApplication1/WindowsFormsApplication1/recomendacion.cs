@@ -8,29 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tpAnual
+namespace TPDisenio2014
 {
        
     public partial class recomendacion : Form
     {
-        private Administrador _unAdministrador;
         private Partido _unPartido;
         private Jugador _unJugador;
-        private Jugador _jugadorLogueado;
-
-        public Jugador jugadorLogueado
-        {
-            get { return _jugadorLogueado;}
-            set { _jugadorLogueado = value; }
-        }
-
-
-        //private DateTime _FechaYHora;
-        public Administrador unAdministrador
-        {
-            get { return _unAdministrador; }
-            set { _unAdministrador = value; }
-        }
 
         public Partido unPartido
         {
